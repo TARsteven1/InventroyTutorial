@@ -36,5 +36,9 @@ public class GameSaveManage : MonoBehaviour {
             file.Close();
         }
     }
-	
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
 }
