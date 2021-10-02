@@ -330,7 +330,39 @@ MonoBehaviour:
   roomLayer:
     serializedVersion: 2
     m_Bits: 256
+  maxStep: 0
   rooms: []
+  wallType:
+    singleLeft: {fileID: 2217895409414511119, guid: 2b7534753126a0e43a9ff233c1a1806d,
+      type: 3}
+    singleRight: {fileID: 2217895409414511119, guid: 9581553400f90b047b8264c20662493d,
+      type: 3}
+    singleUp: {fileID: 2217895409414511119, guid: 50d295bea4f94bd46841609847415ba2,
+      type: 3}
+    singleDown: {fileID: 2217895409414511119, guid: c0966ca5275a4b7499fc0bfcca0136e0,
+      type: 3}
+    doubleLU: {fileID: 2217895409414511119, guid: 4d9aba5963cfd6949a54e5b5c3fd0015,
+      type: 3}
+    doubleLR: {fileID: 2217895409414511119, guid: c07b88deebc71c942b9087fe9c6d9d15,
+      type: 3}
+    doubleLD: {fileID: 2217895409414511119, guid: c69511016edb9ac4cb8dbe2a65748b69,
+      type: 3}
+    doubleUR: {fileID: 2217895409414511119, guid: 28b5ce53e8b756b46a64675e24abcc3f,
+      type: 3}
+    doubleUD: {fileID: 2217895409414511119, guid: 3de3fbbbcfa40fa4f9ff5ccc6b655e3d,
+      type: 3}
+    doubleRD: {fileID: 2217895409414511119, guid: 2a2dab6127824ab42923504641349e91,
+      type: 3}
+    tripleLUR: {fileID: 2217895409414511119, guid: 1078224ee8fffe04fb31d428627b02da,
+      type: 3}
+    tripleLUD: {fileID: 2217895409414511119, guid: 3b42559bb70a97949a1a33718ffb7a60,
+      type: 3}
+    tripleURD: {fileID: 2217895409414511119, guid: 02be3725e8b20bc40b27f83148a9fb4e,
+      type: 3}
+    tripleLRD: {fileID: 2217895409414511119, guid: 93999ee9b01b2b0438939ac7eaf4836d,
+      type: 3}
+    fourDoors: {fileID: 2217895409414511119, guid: 247a08396ac2e934786d52ad6c3c4e9a,
+      type: 3}
 --- !u!4 &1113946211
 Transform:
   m_ObjectHideFlags: 0
@@ -436,6 +468,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1424288264686765122, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424288264686765122, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424288264686765122, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424288264686765122, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2834614107794517859, guid: e6a7ec23ff556134fa209117791cedcf,
         type: 3}
       propertyPath: m_RootOrder
@@ -490,6 +542,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959763876386761812, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959763876386761812, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959763876386761812, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959763876386761812, guid: e6a7ec23ff556134fa209117791cedcf,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.82
       objectReference: {fileID: 0}
     - target: {fileID: 8262808145574935775, guid: e6a7ec23ff556134fa209117791cedcf,
         type: 3}
