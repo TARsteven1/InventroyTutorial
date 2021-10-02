@@ -42,8 +42,16 @@ public class Room : MonoBehaviour
             doorNumber++;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag=="Player")
+        {
+            CameraController.instance.ChangeTarget(transform);
+        }
+    }
 
 
-  
-  
+
+
+
 }

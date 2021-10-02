@@ -103,7 +103,7 @@ public class RoomGenerator : MonoBehaviour
                 if (newRoom.roomUp)
                     Instantiate(wallType.singleUp, roomPosition, Quaternion.identity);
                 if (newRoom.roomDown)
-                    Instantiate(wallType.singleLeft, roomPosition, Quaternion.identity);
+                    Instantiate(wallType.singleDown, roomPosition, Quaternion.identity);
                 if (newRoom.roomLeft)
                     Instantiate(wallType.singleLeft, roomPosition, Quaternion.identity);
                 if (newRoom.roomRight)
