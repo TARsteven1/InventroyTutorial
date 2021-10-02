@@ -58,10 +58,10 @@ public class RoomGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        //if (Input.anyKeyDown)
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //}
     }
     void ChangePointPos()
     {
@@ -95,7 +95,7 @@ public class RoomGenerator : MonoBehaviour
         newRoom.roomDown = Physics2D.OverlapCircle(roomPosition + new Vector3(0, -yOffset, 0), 0.2f, roomLayer);
         newRoom.roomLeft = Physics2D.OverlapCircle(roomPosition + new Vector3(-xOffset, 0, 0), 0.2f, roomLayer);
         newRoom.roomRight = Physics2D.OverlapCircle(roomPosition + new Vector3(xOffset, 0, 0), 0.2f, roomLayer);
-        newRoom.UpdateRoom();
+        newRoom.UpdateRoom(xOffset,yOffset);
 
         switch (newRoom.doorNumber)
         {
@@ -107,7 +107,7 @@ public class RoomGenerator : MonoBehaviour
                 if (newRoom.roomLeft)
                     Instantiate(wallType.singleLeft, roomPosition, Quaternion.identity);
                 if (newRoom.roomRight)
-            Instantiate(wallType.singleRight, roomPosition, Quaternion.identity);
+                    Instantiate(wallType.singleRight, roomPosition, Quaternion.identity);
                 break;
             case 2:
                 if (newRoom.roomLeft && newRoom.roomUp)
@@ -137,8 +137,8 @@ public class RoomGenerator : MonoBehaviour
                 if (newRoom.roomLeft && newRoom.roomUp && newRoom.roomRight && newRoom.roomDown)
                     Instantiate(wallType.fourDoors, roomPosition, Quaternion.identity);
                 break;
-            default:
-                break;
+            //default:
+            //    break;
         }
     }
     public void FindEndRoom()

@@ -20,12 +20,24 @@ public class Room : MonoBehaviour
         doorDown.SetActive(roomDown);
 
     }
-    public void UpdateRoom()
+    public void UpdateRoom(float xOffset,float yOffset)
     {
-        stepToStart = (int)(Mathf.Abs(transform.position.x / 18) + Mathf.Abs(transform.position.y / 9));
+        stepToStart = (int)(Mathf.Abs(transform.position.x / xOffset) + Mathf.Abs(transform.position.y / yOffset));
         text.text = stepToStart.ToString();
 
-        if (roomUp||roomDown||roomLeft||roomRight)
+        if (roomUp)
+        {
+            doorNumber++;
+        }
+        if (roomDown)
+        {
+            doorNumber++;
+        }
+        if (roomLeft)
+        {
+            doorNumber++;
+        }
+        if (roomRight)
         {
             doorNumber++;
         }
