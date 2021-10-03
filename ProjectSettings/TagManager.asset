@@ -53,3 +53,6 @@ TagManager:
   - name: Player
     uniqueID: 1333914767
     locked: 0
+  - name: Chat
+    uniqueID: 3382023977
+    locked: 0
