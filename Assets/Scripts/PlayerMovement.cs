@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviourPun
 {
@@ -13,13 +15,23 @@ public class PlayerMovement : MonoBehaviourPun
     public float speed;
     Vector2 movement;
 
+    public TextMeshProUGUI PlayerName;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
-        
+        //PlayerName = transform.GetChild(1).GetChild(0).GetComponent<TextMeshPro>();
 
+        if (photonView.IsMine)
+        {
+            PlayerName.text = PhotonNetwork.NickName;
+        }
+        else
+        {
+            PlayerName.text = photonView.Owner.NickName;
+        }
 
     }
 
