@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPun
 {
     Rigidbody2D rb;
     Collider2D coll;
@@ -24,9 +25,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Movement();
-        SwitchAnim();
-        OnOpenBag();
+        if (!photonView.IsMine && PhotonNetwork.IsConnected)
+            return;
+        
+            Movement();
+            SwitchAnim();
+            OnOpenBag();             
     }
 
     void Movement()//移动
